@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us - Medora</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -16,8 +17,8 @@
       </a>
       <nav class="nav">
         <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-		<a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="about.html" class="active">About</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -26,59 +27,136 @@
   <!-- ABOUT SECTION -->
   <section class="about">
     <div class="container">
-      <h2>About Medora</h2>
-      <p>
-        Medora is dedicated to providing premium orthopedic and compression products 
-        that promote recovery, comfort, and mobility.  
-        Our product lines include orthopedic clothes, compression garments, 
-        and orthopedic slippers, all crafted with medical-grade materials.
-      </p>
-      <p>
-        We collaborate closely with healthcare professionals to ensure our products 
-        meet the needs of both patients and institutions.  
-        Our mission is to enhance the quality of life for those in need of 
-        orthopedic and compression support — with innovation, comfort, and reliability 
-        at the heart of everything we do.
-      </p>
+      <div class="section-title">
+        <h2>About Medora</h2>
+        <p>Global Trade & Strategic Advisory</p>
+      </div>
+      
+      <div class="about-content" style="max-width: 800px; margin: 0 auto;">
+        <!-- Founder Letter -->
+        <div style="background: var(--off-white); padding: 2rem; border-radius: var(--radius); margin-bottom: 2rem;">
+          <h3 style="color: var(--main-blue); margin-bottom: 1rem;">Welcome from Our Founder</h3>
+          <p style="margin-bottom: 1rem; font-style: italic;">
+            "It is with great pride and purpose that I introduce Medora group; a company founded on the vision of bridging continents, 
+            industries, and opportunities through transparent and effective global trade."
+          </p>
+          <p style="font-weight: 600;">Jalel Khlifi<br>CEO - Medora International</p>
+        </div>
+        
+        <!-- Company Overview -->
+        <h3 style="color: var(--main-blue); margin-bottom: 1rem;">Company Overview</h3>
+        <p style="margin-bottom: 1.5rem;">
+          Medora International is a global trading powerhouse committed to connecting trusted producers and buyers 
+          while facilitating growth through ethical practices, innovation, and logistical excellence.
+        </p>
+        
+        <!-- Global Presence -->
+        <h3 style="color: var(--main-blue); margin-bottom: 1rem;">Global Presence</h3>
+        <p style="margin-bottom: 1.5rem;">
+          Our strategic hubs enable agile operations with cultural fluency and local expertise:
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+          <div style="background: var(--off-white); padding: 1.5rem; border-radius: var(--radius);">
+            <i class="fas fa-map-marker-alt" style="color: var(--teal); margin-bottom: 0.8rem; font-size: 1.5rem;"></i>
+            <h4 style="color: var(--main-blue); margin-bottom: 0.5rem;">Canada</h4>
+            <p>3100 Blvd. de la Concorde Est<br>Laval, QC H7E 2B8</p>
+            <p>+1 514 652-7202</p>
+          </div>
+          <div style="background: var(--off-white); padding: 1.5rem; border-radius: var(--radius);">
+            <i class="fas fa-map-marker-alt" style="color: var(--teal); margin-bottom: 0.8rem; font-size: 1.5rem;"></i>
+            <h4 style="color: var(--main-blue); margin-bottom: 0.5rem;">Tunisia</h4>
+            <p>63 Av. H. Bourguiba<br>Le Parnasse, 4<sup>ème</sup> étage, B 401<br>1000 Tunis</p>
+            <p>+216 98 724 916</p>
+          </div>
+          <div style="background: var(--off-white); padding: 1.5rem; border-radius: var(--radius);">
+            <i class="fas fa-map-marker-alt" style="color: var(--teal); margin-bottom: 0.8rem; font-size: 1.5rem;"></i>
+            <h4 style="color: var(--main-blue); margin-bottom: 0.5rem;">France</h4>
+            <p>14 rue du Docteur Fillioux<br>94350 Villiers-sur-Marne</p>
+            <p>+33 7 68 65 50 71</p>
+          </div>
+        </div>
+        
+        <!-- Vision & Mission -->
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem;">
+          <div style="flex: 1; min-width: 300px; background: var(--off-white); padding: 1.5rem; border-radius: var(--radius);">
+            <h3 style="color: var(--main-blue); margin-bottom: 1rem;">Our Vision</h3>
+            <p>To redefine international trade by eliminating barriers, simplifying sourcing, and building trust-driven partnerships across borders.</p>
+          </div>
+          <div style="flex: 1; min-width: 300px; background: var(--off-white); padding: 1.5rem; border-radius: var(--radius);">
+            <h3 style="color: var(--main-blue); margin-bottom: 1rem;">Our Mission</h3>
+            <p>To deliver value through direct connections, strategic advisory, and supply chain precision supporting industries that power the world.</p>
+          </div>
+        </div>
+        
+        <!-- Core Values -->
+        <div class="values" style="margin-top: 3rem;">
+          <h3 style="color: var(--main-blue); margin-bottom: 1.5rem; text-align: center;">Our Core Values</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+            <div style="background: var(--off-white); padding: 1.5rem; border-radius: var(--radius); text-align: center;">
+              <i class="fas fa-handshake" style="font-size: 2.5rem; color: var(--teal); margin-bottom: 1rem;"></i>
+              <h4 style="color: var(--main-blue); margin-bottom: 0.8rem;">Transparent Dealings</h4>
+              <p>Clear terms and detailed documentation for trustworthy partnerships</p>
+            </div>
+            <div style="background: var(--off-white); padding: 1.5rem; border-radius: var(--radius); text-align: center;">
+              <i class="fas fa-globe" style="font-size: 2.5rem; color: var(--teal); margin-bottom: 1rem;"></i>
+              <h4 style="color: var(--main-blue); margin-bottom: 0.8rem;">Global Network</h4>
+              <p>Worldwide reach combined with deep regional knowledge</p>
+            </div>
+            <div style="background: var(--off-white); padding: 1.5rem; border-radius: var(--radius); text-align: center;">
+              <i class="fas fa-users" style="font-size: 2.5rem; color: var(--teal); margin-bottom: 1rem;"></i>
+              <h4 style="color: var(--main-blue); margin-bottom: 0.8rem;">Customer-Centric</h4>
+              <p>Services structured to solve your specific challenges</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-<footer>
-  <div class="footer-container">
-    <!-- Column 1: Logo + tagline -->
-    <div class="footer-column">
-      <img src="images/logo.png" alt="Medora Logo" class="footer-logo">
-      <p class="footer-tagline">Providing quality orthopedic & compression wear.</p>
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-column">
+        <div class="footer-logo">Medora</div>
+        <p class="footer-tagline">Redefining international trade by eliminating barriers and building trust-driven partnerships.</p>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+          <li><a href="#"><i class="fas fa-file-alt"></i> Terms of Service</a></li>
+        </ul>
+      </div>
+      
+        <div class="footer-column">
+          <h4>Global Offices</h4>
+          <div class="contact-info">
+            <div class="office">
+              <strong>Canada</strong>
+              <p>3100 Blvd. de la Concorde Est<br>Laval, QC H7E 2B8</p>
+              <p>+1 514 652-7202</p>
+            </div>
+            <div class="office">
+              <strong>Tunisia</strong>
+              <p>63 Av. H. Bourguiba<br>Le Parnasse, 4<sup>ème</sup> étage, B 401<br>1000 Tunis</p>
+              <p>+216 98 724 916</p>
+            </div>
+            <div class="office">
+              <strong>Email</strong>
+              <p>info@medoragroup.com</p>
+            </div>
+          </div>
+        </div>
     </div>
-
-    <!-- Column 2: Contact Information -->
-    <div class="footer-column">
-      <h4>Contact Us</h4>
-      <p><strong>Canada</strong><br>
-      3100 Blvd. de la Concorde Est, Laval, QC H7E 2B8<br>
-      +1 514 652-7202</p>
-      <p><strong>Tunisia</strong><br>
-      63 Av. H. Bourguiba, Le Parnasse, 4em étage, B 401 — 1000 Tunis<br>
-      +216 98 724 916</p>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Medora Group. All rights reserved. | Trade & Advisory Group</p>
     </div>
-
-    <!-- Column 3: Quick Links -->
-    <div class="footer-column">
-      <h4>Get Help</h4>
-      <ul class="footer-links">
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 Medora. All rights reserved.</p>
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>
