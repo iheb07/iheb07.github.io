@@ -1,0 +1,257 @@
+:root{
+  --main-teal: #0E9594;
+  --light-teal: #56C4C4;
+  --dark-blue: #0B4F6C;
+  --white: #FFFFFF;
+  --neutral-grey: #F4F4F4;
+  --text-dark: #10242b;
+  --muted: #666666;
+  --page-max: 1200px;
+  --radius: 12px;
+  --font: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Reset */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: var(--font);
+  color: var(--text-dark);
+  background: var(--white);
+  display:flex;
+  flex-direction:column;
+  min-height:100vh; /* ensures footer can stick to bottom */
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Utility container */
+.container{
+  width:90%;
+  max-width:var(--page-max);
+  margin:0 auto;
+}
+
+/* ---------- Header ---------- */
+/* Handles both <header class="header"> and plain <header> */
+header, .header {
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(11,79,108,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+}
+
+.header .container, header .container {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 20px;
+  padding: 0.8rem 0;
+}
+
+/* logo */
+.logo { height: 50px; width:auto; display:inline-block; }
+@media (max-width:600px){ .logo { height:60px; } }
+
+/* nav */
+.nav, header nav { display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
+.nav a, header nav a {
+  color: var(--dark-blue);
+  text-decoration: none;
+  font-weight:600;
+  padding:6px 8px;
+  border-radius:8px;
+  transition: all .15s ease;
+  font-size:0.95rem;
+}
+.nav a:hover, header nav a:hover { color: var(--main-teal); background: rgba(14,149,148,0.06); }
+.nav a.active { color: var(--main-teal); }
+
+/* ---------- Main / Hero ---------- */
+main { flex: 1; } /* ensures footer stays at bottom when content is short */
+
+.hero {
+  background: var(--neutral-grey);
+  padding: 4rem 0;
+  text-align:center;
+}
+.hero .container { padding:0; }
+.hero h1{
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  margin-bottom:0.6rem;
+  color:var(--dark-blue);
+  font-weight:700;
+}
+.hero p {
+  margin:0 auto 1.8rem;
+  max-width:720px;
+  color:var(--muted);
+  font-size:1rem;
+  line-height:1.5;
+}
+
+/* button */
+.btn {
+  display:inline-block;
+  background:var(--main-teal);
+  color:var(--white);
+  padding:0.7rem 1.4rem;
+  border-radius:28px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow: 0 6px 18px rgba(14,149,148,0.08);
+  transition: background .15s ease, transform .08s ease;
+}
+.btn:hover { background:var(--light-teal); transform: translateY(-2px); }
+
+/* ---------- Section basics ---------- */
+section {
+  padding: 3rem 0;
+  background: var(--white);
+}
+.section-title { text-align:center; margin-bottom:1.4rem; font-size:1.4rem; color:var(--dark-blue); }
+
+/* ---------- Products grid ---------- */
+.products .product-grid,
+.brochures .brochure-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:1.5rem;
+}
+
+.product-card, .brochure-card {
+  background: var(--neutral-grey);
+  border-radius: var(--radius);
+  padding:1.2rem;
+  box-shadow: 0 4px 14px rgba(11,79,108,0.04);
+  text-align:center;
+}
+.product-card img, .brochure-card img {
+  max-width: 100%;
+  max-height: 180px; /* limits height without cropping */
+  width: auto;
+  height: auto;
+  object-fit: contain; /* keeps the whole image visible */
+  border-radius: 10px;
+  margin-bottom: 0.9rem;
+  background-color: white; /* optional: gives clean edges for odd aspect ratios */
+  padding: 4px; /* optional: spacing around image */
+}
+.product-card h3, .brochure-card h3 { margin:0.4rem 0; color:var(--dark-blue); }
+.product-card p, .brochure-card p { color:var(--muted); font-size:0.95rem; }
+
+/* ---------- About ---------- */
+.about p { max-width:900px; margin:0 auto; color:var(--muted); font-size:1rem; line-height:1.6; }
+
+.pdf-download {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--main-teal);
+  text-decoration: none;
+  gap: 8px;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.pdf-download img {
+  width: 40px;    /* size you want */
+  height: auto;
+  object-fit: contain;
+  margin-right: 8px;
+  padding: 2px;          /* add some padding so edges aren’t cut off */
+  background: transparent;     /* or transparent if your bg is white */
+  border-radius: 6px;    /* optional: soften edges */
+  box-sizing: content-box; /* ensure padding doesn’t shrink image */
+  display: inline-block;
+}
+
+.pdf-download:hover {
+  color: var(--light-teal);
+}
+
+/* ---------- Footer (balanced, spaced) ---------- */
+/* Supports both .footer and <footer> markup */
+footer, .footer {
+  background: var(--dark-blue);
+  color: var(--white);
+  margin-top: 30px;
+  padding-top: 34px;
+  /* keep bottom separate */
+}
+
+/* main container inside footer */
+.footer-container, .footer-content {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 0 20px 12px;
+  display:flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  gap: 70px; /* increased spacing between columns to fill right side */
+  flex-wrap:wrap;
+}
+
+/* each column */
+.footer-column, .footer-section {
+  flex: 1 1 280px; /* make each column stretch and fill */
+  min-width: 220px;
+}
+
+/* Logo column */
+.footer-logo { max-width:160px; display:block; margin-bottom:10px; }
+.footer-tagline { color: #E6F7F6; font-size:0.95rem; line-height:1.4; }
+
+/* contact column */
+.footer-column h3, .footer-section h3 {
+  color: var(--light-teal);
+  margin-bottom:10px;
+  font-size:1.05rem;
+}
+.footer-column p { color: #E6F7F6; line-height:1.5; margin-bottom:0.6rem; font-size:0.95rem; }
+
+/* help links column — split into two columns vertically for better fill */
+.footer-links {
+  list-style:none;
+  padding:0;
+  margin:0;
+  color:#E6F7F6;
+  column-count: 2;
+  column-gap: 18px;
+}
+.footer-links li { margin-bottom:10px; break-inside: avoid; }
+.footer-links a {
+  color: #E6F7F6;
+  text-decoration:none;
+  font-size:0.95rem;
+}
+.footer-links a:hover { color: var(--light-teal); text-decoration:underline; }
+
+/* subtle divider and small bottom bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.03);
+  padding: 12px 20px;
+  color: #DDEFF0;
+  font-size:0.88rem;
+  text-align:center;
+}
+
+/* ---------- Utility / responsiveness ---------- */
+@media (max-width:900px){
+  .footer-container { gap: 36px; }
+  .footer-links { column-count: 2; }
+}
+@media (max-width:640px){
+  .nav { gap:10px; }
+  .footer-links { column-count: 1; }
+  .hero { padding: 2.4rem 0; }
+  .product-card img, .brochure-card img { height: 150px; }
+}
+
+/* small helpers */
+.text-muted{ color:var(--muted); font-size:0.95rem; }
+.center{ text-align:center; }
