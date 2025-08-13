@@ -112,7 +112,7 @@ header {
 /* ===== HERO SECTION ===== */
 .hero {
   background: linear-gradient(rgba(11, 79, 108, 0.85), rgba(11, 79, 108, 0.85)),
-    url("https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80");
+    url("images/hero.jpg");
   background-size: cover;
   background-position: center;
   color: var(--white);
@@ -295,7 +295,8 @@ header {
 .map-container {
   position: relative;
   height: 500px;
-  background: #0a435f;
+  background: #0a435f url(images/map.jpg) no-repeat center center;
+  background-size: cover; /* Changed from fixed to cover */
   border-radius: var(--radius);
   overflow: hidden;
   margin: 2rem auto;
