@@ -139,19 +139,43 @@
                 <!-- Map points with adjusted positions -->
                 <div class="map-point" style="top: 20%; left: 25%;" data-location="canada"></div>
                 <div class="map-point" style="top: 26%; left: 50%;" data-location="france"></div>
+                <div class="map-point" style="top: 46%; left: 46%;" data-location="guinea"></div>
+                <div class="map-point" style="top: 38%; left: 62%;" data-location="uae"></div>
+                <div class="map-point" style="top: 41%; left: 69%;" data-location="india"></div>
                 <div class="map-point" style="top: 34%; left: 52%;" data-location="tunisia"></div>
+                <div class="map-point" style="top: 34%; left: 50%;" data-location="algeria"></div>
                 
                 <!-- Location Info Boxes -->
                 <div class="location-info" id="canada-info">
-                    <h3>Canada</h3>
+                    <h3>Québec (Canada)</h3>
                     <p>North American HQ and investment gateway</p>
                     <p>3100 Blvd. de la Concorde Est, Laval, QC H7E 2B8</p>
                     <p>+1 514 652-7202</p>
                 </div>
                 <div class="location-info" id="france-info">
-                    <h3>France</h3>
+                    <h3>Paris (France)</h3>
+                    <p>European operations and compliance</p>
                     <p>14 rue du Docteur Fillioux, 94350 Villiers-sur-Marne</p>
                     <p>+33 7 68 65 50 71</p>
+                </div>
+                <div class="location-info" id="guinea-info">
+                    <h3>Conakry (Guinea)</h3>
+                    <p>West Africa Trade & Mining Hub</p>
+                    <p>BLVD L’autoroute, Fidel Castro, Maneah Guinée</p>
+                    <p>+224 625 20 70 77</p>
+                    <p>+1 514 968 1370</p>
+                </div>
+                <div class="location-info" id="uae-info">
+                    <h3>Dubai (UAE)</h3>
+                    <p>MENA Region Logistics & Energy Base</p>
+                    <p>Unit Q3 - 207 - Saif Zone - Sharjah</p>
+                    <p>United Arab Emirates</p>
+                    <p>+971 56 957 2056</p>
+                </div>
+                <div class="location-info" id="india-info">
+                    <h3>India</h3>
+                    <p>Strategic sourcing, manufacturing partnerships</p>
+                    <!-- Address details to be added -->
                 </div>
                 <div class="location-info" id="tunisia-info">
                     <h3>Tunisia</h3>
@@ -159,6 +183,11 @@
                     <p>63 Av. H. Bourguiba, Le Parnasse, 4em étage, B 401</p>
                     <p>1000 Tunis</p>
                     <p>+216 98 724 916</p>
+                </div>
+                <div class="location-info" id="algeria-info">
+                    <h3>Algeria</h3>
+                    <p>Access to extractive and chemical industries</p>
+                    <!-- Address details to be added -->
                 </div>
             </div>
         </div>
@@ -257,28 +286,39 @@
     </footer>
 
     <script>
-        // Interactive map functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mapPoints = document.querySelectorAll('.map-point');
             const locationInfos = document.querySelectorAll('.location-info');
+            const locationList = document.querySelectorAll('.location-list li');
+            const mapContainer = document.querySelector('.map-container');
+            const toggleRotationBtn = document.getElementById('toggle-rotation');
             
-            mapPoints.forEach(point => {
-                point.addEventListener('click', function() {
-                    const location = this.getAttribute('data-location');
-                    
-                    // Remove active class from all points and infos
-                    mapPoints.forEach(p => p.classList.remove('active'));
-                    locationInfos.forEach(info => info.classList.remove('active'));
-                    
-                    // Add active class to clicked point and corresponding info
-                    this.classList.add('active');
-                    document.getElementById(`${location}-info`).classList.add('active');
-                });
-            });
-            
-            // Auto-rotate location highlights
+            let rotationInterval;
             let currentIndex = 0;
+            let isRotating = true;
+            
+            // Function to show location info
+            function showLocation(location) {
+                // Remove active class from all points and infos
+                mapPoints.forEach(p => p.classList.remove('active'));
+                locationInfos.forEach(info => info.classList.remove('active'));
+                
+                // Add active class to clicked point and corresponding info
+                const point = document.querySelector(`.map-point[data-location="${location}"]`);
+                if (point) {
+                    point.classList.add('active');
+                }
+                
+                const info = document.getElementById(`${location}-info`);
+                if (info) {
+                    info.classList.add('active');
+                }
+            }
+            
+            // Function to rotate locations
             function rotateLocations() {
+                if (!isRotating) return;
+                
                 mapPoints.forEach(p => p.classList.remove('active'));
                 locationInfos.forEach(info => info.classList.remove('active'));
                 
@@ -290,7 +330,48 @@
             }
             
             // Start rotation
-            setInterval(rotateLocations, 5000);
+            rotationInterval = setInterval(rotateLocations, 5000);
+            
+            // Event listeners for map points
+            mapPoints.forEach(point => {
+                point.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const location = this.getAttribute('data-location');
+                    showLocation(location);
+                });
+            });
+            
+            // Event listeners for location list items
+            locationList.forEach(item => {
+                item.addEventListener('click', function() {
+                    const location = this.getAttribute('data-location');
+                    showLocation(location);
+                });
+            });
+            
+            // Event listener for map container to close info boxes
+            mapContainer.addEventListener('click', function(e) {
+                // Check if the click was on a location info box
+                if (e.target.closest('.location-info')) {
+                    return; // Do nothing if click is inside info box
+                }
+                
+                // Remove active class from all points and infos
+                mapPoints.forEach(p => p.classList.remove('active'));
+                locationInfos.forEach(info => info.classList.remove('active'));
+            });
+            
+            // Toggle rotation button
+            toggleRotationBtn.addEventListener('click', function() {
+                isRotating = !isRotating;
+                if (isRotating) {
+                    this.innerHTML = '<i class="fas fa-pause"></i> Pause Auto-Rotation';
+                    rotationInterval = setInterval(rotateLocations, 5000);
+                } else {
+                    this.innerHTML = '<i class="fas fa-play"></i> Resume Auto-Rotation';
+                    clearInterval(rotationInterval);
+                }
+            });
         });
     </script>
 </body>
