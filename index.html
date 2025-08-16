@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Replace your current <head> section with this optimized version -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medora Group - Global Trade & Advisory</title>
+    <title>Medora Group | Global Trade & Advisory Services | Supply Chain Solutions</title>
+    <meta name="description" content="Strategic global trade solutions, sourcing expertise, and investment facilitation across engineering, energy, chemicals, and pharmaceutical sectors. Worldwide presence.">
+    <meta name="keywords" content="global trade, international sourcing, supply chain solutions, investment facilitation, engineering procurement, chemical sourcing, pharmaceutical supply chain">
+    <meta name="author" content="Medora Group">
+    <meta property="og:title" content="Medora Group - Global Trade & Advisory Services">
+    <meta property="og:description" content="Strategic global trade solutions across multiple sectors with a worldwide presence.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.medoragroup.com">
+    <meta property="og:image" content="https://www.medoragroup.com/images/social-preview.jpg">
+
+    <link rel="canonical" href="https://www.medoragroup.com">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -30,7 +41,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Bridging Continents Through Global Trade</h1>
+            <h1>Global Trade & Advisory Services - Strategic Sourcing Solutions</h1>
             <p>Strategic sourcing, investment facilitation, and supply chain solutions across engineering, energy, chemicals, and pharmaceuticals.</p>
             <div class="hero-buttons">
                 <a href="services.html" class="btn">Explore Our Services</a>
@@ -243,12 +254,17 @@
     </section>
 
     <!-- Footer -->
-<!-- Updated Footer Structure -->
     <footer>
       <div class="container footer-container">
         <div class="footer-column">
           <div class="footer-logo">Medora Group</div>
           <p class="footer-tagline">Redefining international trade by eliminating barriers and building trust-driven partnerships.</p>
+          <a href="https://www.linkedin.com/company/medora-group" 
+             style="color: var(--gold); 
+                    display: inline-block; 
+                    margin: 10px 0;">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
         </div>
         
         <div class="footer-column">
@@ -289,7 +305,32 @@
       </div>
     </footer>
 
-    <script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Medora Group",
+          "url": "https://www.medoragroup.com",
+          "logo": "https://www.medoragroup.com/images/logo.png",
+          "description": "Global trade and advisory services specializing in strategic sourcing and supply chain solutions",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3100 Blvd. de la Concorde Est",
+            "addressLocality": "Laval",
+            "addressRegion": "QC",
+            "postalCode": "H7E 2B8",
+            "addressCountry": "CA"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-514-652-7202",
+            "contactType": "Customer service",
+            "areaServed": ["CA", "TN", "AE", "IN", "GN", "FR", "DZ"],
+            "availableLanguage": ["English", "French", "Arabic"]
+          }
+        }
+     </script>
+     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const mapPoints = document.querySelectorAll('.map-point');
             const locationInfos = document.querySelectorAll('.location-info');
