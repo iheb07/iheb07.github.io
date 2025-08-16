@@ -483,13 +483,6 @@ header {
     height: 300px;
   }
   
-  /* Final adjustments for mobile */
-  .map-point[data-location="canada"] { top: 24%; }
-  .map-point[data-location="france"] { top: 30%; }
-  .map-point[data-location="guinea"] { top: 50%; }
-  .map-point[data-location="uae"] { top: 42%; }
-  .map-point[data-location="india"] { top: 45%; }
-  
   .map-point {
     width: 14px;
     height: 14px;
