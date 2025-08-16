@@ -427,16 +427,18 @@ header {
 @media (max-width: 900px) {
   .map-container {
     height: 400px;
+    background-size: contain;                                               
+    background-position: center top;                                                   
   }
   
   /* Adjusted positions for medium screens */
-  .map-point[data-location="canada"] { top: 21%; left: 24.5%; }
-  .map-point[data-location="france"] { top: 27%; left: 49.5%; }
-  .map-point[data-location="guinea"] { top: 47%; left: 45.5%; }
-  .map-point[data-location="uae"] { top: 39%; left: 61.5%; }
-  .map-point[data-location="india"] { top: 42%; left: 68.5%; }
-  .map-point[data-location="tunisia"] { top: 35%; left: 51.5%; }
-  .map-point[data-location="algeria"] { top: 35%; left: 49.5%; }
+  .map-point[data-location="canada"] { top: 22%; left: 25%; }
+  .map-point[data-location="france"] { top: 28%; left: 50%; }
+  .map-point[data-location="guinea"] { top: 48%; left: 46%; }
+  .map-point[data-location="uae"] { top: 40%; left: 62%; }
+  .map-point[data-location="india"] { top: 43%; left: 69%; }
+  .map-point[data-location="tunisia"] { top: 36%; left: 52%; }
+  .map-point[data-location="algeria"] { top: 36%; left: 50%; }
   
   .map-point {
     width: 18px;
@@ -457,16 +459,17 @@ header {
 @media (max-width: 768px) {
   .map-container {
     height: 350px;
+    background-position: center center;                                   
   }
   
   /* Fine-tuned positions for smaller screens */
-  .map-point[data-location="canada"] { top: 22%; left: 24%; }
-  .map-point[data-location="france"] { top: 28%; left: 49%; }
-  .map-point[data-location="guinea"] { top: 48%; left: 45%; }
-  .map-point[data-location="uae"] { top: 40%; left: 61%; }
-  .map-point[data-location="india"] { top: 43%; left: 68%; }
-  .map-point[data-location="tunisia"] { top: 36%; left: 51%; }
-  .map-point[data-location="algeria"] { top: 36%; left: 49%; }
+  .map-point[data-location="canada"] { top: 22%; left: 25%; }
+  .map-point[data-location="france"] { top: 28%; left: 50%; }
+  .map-point[data-location="guinea"] { top: 48%; left: 46%; }
+  .map-point[data-location="uae"] { top: 40%; left: 62%; }
+  .map-point[data-location="india"] { top: 43%; left: 69%; }
+  .map-point[data-location="tunisia"] { top: 36%; left: 52%; }
+  .map-point[data-location="algeria"] { top: 36%; left: 50%; }
   
   .map-point {
     width: 16px;
@@ -481,11 +484,11 @@ header {
   }
   
   /* Final adjustments for mobile */
-  .map-point[data-location="canada"] { top: 23%; }
-  .map-point[data-location="france"] { top: 29%; }
-  .map-point[data-location="guinea"] { top: 49%; }
-  .map-point[data-location="uae"] { top: 41%; }
-  .map-point[data-location="india"] { top: 44%; }
+  .map-point[data-location="canada"] { top: 24%; }
+  .map-point[data-location="france"] { top: 30%; }
+  .map-point[data-location="guinea"] { top: 50%; }
+  .map-point[data-location="uae"] { top: 42%; }
+  .map-point[data-location="india"] { top: 45%; }
   
   .map-point {
     width: 14px;
