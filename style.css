@@ -327,6 +327,7 @@ header {
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* ===== MAP CONTAINER & POINTS ===== */
 .map-container {
   position: relative;
   height: 500px;
@@ -413,23 +414,34 @@ header {
   line-height: 1.5;
 }
 
+/* Original point positions */
+.map-point[data-location="canada"] { top: 20%; left: 25%; }
+.map-point[data-location="france"] { top: 26%; left: 50%; }
+.map-point[data-location="guinea"] { top: 46%; left: 46%; }
+.map-point[data-location="uae"] { top: 38%; left: 62%; }
+.map-point[data-location="india"] { top: 41%; left: 69%; }
+.map-point[data-location="tunisia"] { top: 34%; left: 52%; }
+.map-point[data-location="algeria"] { top: 34%; left: 50%; }
+
+/* Mobile-specific adjustments */
 @media (max-width: 900px) {
   .map-container {
     height: 400px;
-    background-attachment: scroll;
-    background-size: contain;
-    background-position: center center;
   }
+  
+  /* Adjusted positions for medium screens */
+  .map-point[data-location="canada"] { top: 21%; left: 24.5%; }
+  .map-point[data-location="france"] { top: 27%; left: 49.5%; }
+  .map-point[data-location="guinea"] { top: 47%; left: 45.5%; }
+  .map-point[data-location="uae"] { top: 39%; left: 61.5%; }
+  .map-point[data-location="india"] { top: 42%; left: 68.5%; }
+  .map-point[data-location="tunisia"] { top: 35%; left: 51.5%; }
+  .map-point[data-location="algeria"] { top: 35%; left: 49.5%; }
   
   .map-point {
-    width: 16px;
-    height: 16px;
-    box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.3);
-  }
-  
-  .map-point:hover {
-    transform: translate(-50%, -50%) scale(1.1);
-    box-shadow: 0 0 0 10px rgba(212, 175, 55, 0.4);
+    width: 18px;
+    height: 18px;
+    box-shadow: 0 0 0 7px rgba(212, 175, 55, 0.3);
   }
   
   .location-info {
@@ -443,88 +455,42 @@ header {
 }
 
 @media (max-width: 768px) {
-  .map-point[data-location="canada"] {
-    top: 22% !important;
-    left: 24% !important;
+  .map-container {
+    height: 350px;
   }
   
-  .map-point[data-location="france"] {
-    top: 28% !important;
-    left: 49% !important;
-  }
+  /* Fine-tuned positions for smaller screens */
+  .map-point[data-location="canada"] { top: 22%; left: 24%; }
+  .map-point[data-location="france"] { top: 28%; left: 49%; }
+  .map-point[data-location="guinea"] { top: 48%; left: 45%; }
+  .map-point[data-location="uae"] { top: 40%; left: 61%; }
+  .map-point[data-location="india"] { top: 43%; left: 68%; }
+  .map-point[data-location="tunisia"] { top: 36%; left: 51%; }
+  .map-point[data-location="algeria"] { top: 36%; left: 49%; }
   
-  .map-point[data-location="guinea"] {
-    top: 48% !important;
-    left: 45% !important;
-  }
-  
-  .map-point[data-location="uae"] {
-    top: 40% !important;
-    left: 61% !important;
-  }
-  
-  .map-point[data-location="india"] {
-    top: 43% !important;
-    left: 68% !important;
-  }
-  
-  .map-point[data-location="tunisia"] {
-    top: 36% !important;
-    left: 51% !important;
-  }
-  
-  .map-point[data-location="algeria"] {
-    top: 36% !important;
-    left: 49% !important;
-  }
-  
-  /* Adjust map point size for better touch targets */
   .map-point {
     width: 16px;
     height: 16px;
     box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.3);
   }
-  
-  /* Adjust location info position */
-  .location-info {
-    top: auto;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    max-width: none;
-    width: auto;
-  }
 }
 
 @media (max-width: 480px) {
-  .map-point[data-location="canada"] {
-    top: 23% !important;
+  .map-container {
+    height: 300px;
   }
   
-  .map-point[data-location="france"] {
-    top: 29% !important;
-  }
-  
-  .map-point[data-location="guinea"] {
-    top: 49% !important;
-  }
-  
-  .map-point[data-location="uae"] {
-    top: 41% !important;
-  }
-  
-  .map-point[data-location="india"] {
-    top: 44% !important;
-  }
+  /* Final adjustments for mobile */
+  .map-point[data-location="canada"] { top: 23%; }
+  .map-point[data-location="france"] { top: 29%; }
+  .map-point[data-location="guinea"] { top: 49%; }
+  .map-point[data-location="uae"] { top: 41%; }
+  .map-point[data-location="india"] { top: 44%; }
   
   .map-point {
     width: 14px;
     height: 14px;
-    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.3);
-  }
-  
-  .map-container {
-    height: 320px;
+    box-shadow: 0 0 0 5px rgba(212, 175, 55, 0.3);
   }
   
   .location-info {
