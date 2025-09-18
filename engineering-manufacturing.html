@@ -1,99 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Engineering & Manufacturing Services - Medora Group</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
-    /* Additional styles for engineering service cards */
-    .engineering-services .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin: 3rem 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medora Group | Global Trade & Advisory Services | Supply Chain Solutions</title>
+    <meta name="description" content="Strategic global trade solutions, sourcing expertise, and investment facilitation across engineering, energy, chemicals, and pharmaceutical sectors. Worldwide presence.">
+    <meta name="keywords" content="global trade, international sourcing, supply chain solutions, investment facilitation, engineering procurement, chemical sourcing, pharmaceutical supply chain">
+    <meta name="author" content="Medora Group">
+    <meta property="og:title" content="Medora Group - Global Trade & Advisory Services">
+    <meta property="og:description" content="Strategic global trade solutions across multiple sectors with a worldwide presence.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.medoragroup.com">
+    <meta property="og:image" content="https://www.medoragroup.com/images/social-preview.png">
     
-    .engineering-service-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: all 0.3s ease;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .engineering-service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(11, 79, 108, 0.15);
-    }
-    
-    .engineering-service-img {
-      height: 200px;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .engineering-service-icon {
-      position: absolute;
-      background: rgba(255, 255, 255, 0.9);
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-    
-    .engineering-service-icon i {
-      font-size: 2rem;
-      color: var(--teal);
-    }
-    
-    .engineering-service-content {
-      padding: 1.5rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .engineering-service-title {
-      font-size: 1.4rem;
-      color: var(--main-blue);
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    
-    .engineering-service-description {
-      margin-bottom: 1.5rem;
-      flex-grow: 1;
-      text-align: center;
-    }
-  </style>
+    <link rel="canonical" href="https://www.medoragroup.com">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="header">
+  <header>
     <div class="container header-content">
       <a href="index.html">
-         <img src="images/logo.png" alt="Medora Logo" class="logo"/>
+        <img src="images/logo.png" alt="Medora Logo" class="logo"/>
       </a>
       <nav class="nav">
         <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
+        
+        <!-- Services Dropdown -->
+        <div class="nav-dropdown">
+          <a href="services.html">Services</a>
+          <div class="dropdown-content">
+              <a href="engineering-manufacturing.html">Engineering & Manufacturing</a>
+              <a href="energy-petrochemicals.html">Energy & Petrochemicals</a>
+              <a href="chemicals-minerals.html">Chemicals & Minerals</a>
+              <a href="pharma-products.html">Pharmaceuticals & Healthcare</a>
+          </div>
+        </div>
+          
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>

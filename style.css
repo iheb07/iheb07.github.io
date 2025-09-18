@@ -256,6 +256,95 @@ header {
   font-size: 1.5rem;
 }
 
+/* Dropdown specific styles */
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 290px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: var(--radius);
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+}
+
+.nav-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: var(--main-blue);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(11, 79, 108, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--off-white);
+    color: var(--teal);
+    padding-left: 20px;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.nav-dropdown > a::after {
+    content: '\f107';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-left: 8px;
+    font-size: 0.9rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-dropdown .dropdown-content {
+        position: static;
+        box-shadow: none;
+        margin-top: 0;
+        display: none;
+        background-color: transparent;
+    }
+    
+    .nav-dropdown.active .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown-content a {
+        padding: 10px 0 10px 20px;
+        border-bottom: none;
+    }
+}
+
+.nav a.active {
+    color: var(--teal);
+    position: relative;
+}
+
+.nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 3px;
+    background: var(--teal);
+    border-radius: 3px;
+    transform: translateX(-50%);
+}
+
 /* ===== SECTORS SECTION ===== */
 .sectors {
   background: linear-gradient(to bottom, var(--off-white) 0%, var(--white) 100%);
@@ -849,6 +938,77 @@ footer {
     padding: 0.9rem 1.8rem;
     font-size: 1rem;
   }
+}
+
+/* Additional styles for engineering service cards */
+.engineering-services .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.engineering-service-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.engineering-service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(11, 79, 108, 0.15);
+}
+
+.engineering-service-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.engineering-service-icon {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.engineering-service-icon i {
+  font-size: 2rem;
+  color: var(--teal);
+}
+
+.engineering-service-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.engineering-service-title {
+  font-size: 1.4rem;
+  color: var(--main-blue);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.engineering-service-description {
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  text-align: center;
 }
 
 /* Additional styles specific to chemical-minerals */
