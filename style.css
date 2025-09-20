@@ -978,6 +978,306 @@ footer {
   }
 }
 
+/* Pharma-specific styles */
+/* Hero Section */
+.ortho-hero {
+    background: linear-gradient(rgba(11, 79, 108, 0.85), rgba(11, 79, 108, 0.85)), url('images/orthopedic-hero-bg.png') no-repeat center center/cover;
+    color: var(--white);
+    padding: 8rem 0 6rem;
+    text-align: center;
+}
+
+.ortho-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.ortho-hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--white);
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.25);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #c19d2e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: var(--main-blue);
+    margin-bottom: 1rem;
+}
+
+.section-title p {
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Products Section */
+.ortho-product-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.ortho-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.ortho-product-card {
+    background: var(--off-white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ortho-product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(11, 79, 108, 0.15);
+}
+
+.ortho-product-image-container {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ortho-product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.ortho-product-card:hover .ortho-product-image {
+    transform: scale(1.05);
+}
+
+.ortho-product-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(11, 79, 108, 0.8), transparent);
+    padding: 1.5rem;
+    color: var(--white);
+}
+
+.ortho-product-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.ortho-product-title {
+    font-size: 1.5rem;
+    color: var(--main-blue);
+    margin-bottom: 1rem;
+}
+
+.ortho-product-description {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.ortho-product-features {
+    margin: 1.5rem 0;
+}
+
+.ortho-product-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.ortho-product-features i {
+    color: var(--teal);
+    margin-right: 0.5rem;
+}
+
+.ortho-product-cta {
+    margin-top: auto;
+    text-align: center;
+}
+
+.catalog-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--gold);
+    color: var(--white);
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.catalog-btn:hover {
+    background: #c19d2e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Technical Specifications */
+.specs-section {
+    background: var(--off-white);
+    padding: 5rem 0;
+}
+
+.specs-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.accordion-header {
+    padding: 1.5rem;
+    background: var(--main-blue);
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content.active {
+    max-height: 1000px;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specs-table th, .specs-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.specs-table th {
+    background: #f5f5f5;
+    font-weight: 600;
+}
+
+/* Certifications Section */
+.certifications {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.cert-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--off-white);
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+.cert-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.cert-icon {
+    font-size: 3rem;
+    color: var(--teal);
+    margin-bottom: 1rem;
+}
+
+/* Applications Section */
+.ortho-applications {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, var(--off-white) 0%, var(--white) 100%);
+}
+
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.application-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.application-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(11, 79, 108, 0.1);
+}
+
+.application-icon {
+    font-size: 2.5rem;
+    color: var(--teal);
+    margin-bottom: 1rem;
+}
+
+/* Professional CTA */
+.professional-cta {
+    background: linear-gradient(to right, var(--teal), var(--light-teal));
+    color: var(--white);
+    padding: 5rem 0;
+    text-align: center;
+}
 /* Additional styles for engineering service cards */
 .engineering-services .services-grid {
   display: grid;

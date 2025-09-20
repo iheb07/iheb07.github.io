@@ -86,6 +86,8 @@
             }
         });
     });
+    
+    
 
     // Enhanced dropdown functionality with hover intent
     document.addEventListener('DOMContentLoaded', function() {
