@@ -23,12 +23,16 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="container header-content">
       <a href="index.html">
         <img src="images/logo.png" alt="Medora Logo" class="logo"/>
       </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav class="nav">        
         <!-- Services Dropdown -->
         <div class="nav-dropdown">
@@ -315,30 +319,7 @@
     </div>
   </footer>
 
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Medora Group",
-        "url": "https://www.medoragroup.com",
-        "logo": "https://www.medoragroup.com/images/logo.png",
-        "description": "Global trade and advisory services specializing in strategic sourcing and supply chain solutions",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "3100 Blvd. de la Concorde Est",
-          "addressLocality": "Laval",
-          "addressRegion": "QC",
-          "postalCode": "H7E 2B8",
-          "addressCountry": "CA"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+1-514-652-7202",
-          "contactType": "Customer service",
-          "areaServed": ["CA", "TN", "AE", "IN", "GN", "FR", "DZ"],
-          "availableLanguage": ["English", "French", "Arabic"]
-        }
-      }
-  </script>
+
+  <script src="script.js"></script>
 </body>
 </html>

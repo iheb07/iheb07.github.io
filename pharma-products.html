@@ -28,6 +28,11 @@
       <a href="index.html">
         <img src="images/logo.png" alt="Medora Logo" class="logo"/>
       </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav class="nav">
         <a href="index.html">Home</a>
         
@@ -373,94 +378,56 @@
       </div>
   </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container footer-container">
-    <div class="footer-column">
-      <div class="footer-logo">Medora Group</div>
-      <p class="footer-tagline">Redefining international trade by eliminating barriers and building trust-driven partnerships.</p>
-      <a href="https://www.linkedin.com/company/medora-group" 
-       style="color: var(--gold); 
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-column">
+        <div class="footer-logo">Medora Group</div>
+        <p class="footer-tagline">Redefining international trade by eliminating barriers and building trust-driven partnerships.</p>
+        <a href="https://www.linkedin.com/company/medora-group" 
+        style="color: var(--gold); 
               display: inline-block; 
               margin: 10px 0;">
-      <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-    </div>
+        <i class="fab fa-linkedin fa-2x"></i>
+        </a>
     
-    <div class="footer-column">
-      <h4>Quick Links</h4>
-      <ul class="footer-links">
-        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
-        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-        <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
-        <li><a href="#"><i class="fas fa-file-alt"></i> Terms of Service</a></li>
-      </ul>
-    </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+          <li><a href="#"><i class="fas fa-file-alt"></i> Terms of Service</a></li>
+        </ul>
+      </div>
     
-    <div class="footer-column">
-      <h4>Global Offices</h4>
-      <div class="contact-info">
-        <div class="office">
-          <strong>Canada</strong>
-          <p>3100 Blvd. de la Concorde Est<br>Laval, QC H7E 2B8</p>
-          <p>+1 514 652-7202</p>
-        </div>
-        <div class="office">
-          <strong>Tunisia</strong>
-          <p>63 Av. H. Bourguiba<br>Le Parnasse, 4<sup>ème</sup> étage, B 401<br>1000 Tunis</p>
-          <p>+216 98 724 916</p>
-        </div>
-        <div class="office">
-          <strong>Email</strong>
-          <p>info@medoragroup.com</p>
+      <div class="footer-column">
+        <h4>Global Offices</h4>
+        <div class="contact-info">
+          <div class="office">
+            <strong>Canada</strong>
+            <p>3100 Blvd. de la Concorde Est<br>Laval, QC H7E 2B8</p>
+            <p>+1 514 652-7202</p>
+          </div>
+          <div class="office">
+            <strong>Tunisia</strong>
+            <p>63 Av. H. Bourguiba<br>Le Parnasse, 4<sup>ème</sup> étage, B 401<br>1000 Tunis</p>
+            <p>+216 98 724 916</p>
+          </div>
+          <div class="office">
+            <strong>Email</strong>
+            <p>info@medoragroup.com</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   
-  <div class="footer-bottom">
-    <p>&copy; 2025 Medora Group. All rights reserved. | Trade & Advisory Group</p>
-  </div>
-</footer>
-  <script>
-      // Accordion functionality
-      function toggleAccordion(element) {
-          const content = element.nextElementSibling;
-          const allContents = document.querySelectorAll('.accordion-content');
-          const allHeaders = document.querySelectorAll('.accordion-header');
-          
-          // Close all other accordion items
-          allContents.forEach(item => {
-              if (item !== content) {
-                  item.classList.remove('active');
-              }
-          });
-          
-          allHeaders.forEach(header => {
-              if (header !== element) {
-                  header.querySelector('i').classList.remove('fa-chevron-up');
-                  header.querySelector('i').classList.add('fa-chevron-down');
-              }
-          });
-          
-          // Toggle current item
-          content.classList.toggle('active');
-          
-          // Toggle icon
-          const icon = element.querySelector('i');
-          icon.classList.toggle('fa-chevron-down');
-          icon.classList.toggle('fa-chevron-up');
-      }
-      
-      // Initialize first accordion as open
-      document.addEventListener('DOMContentLoaded', function() {
-          const firstHeader = document.querySelector('.accordion-header');
-          if (firstHeader) {
-              firstHeader.click();
-          }
-      });
-  </script>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Medora Group. All rights reserved. | Trade & Advisory Group</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
