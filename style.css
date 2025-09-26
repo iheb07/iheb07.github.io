@@ -843,11 +843,6 @@ footer {
 
 /* ===== RESPONSIVE: consolidated ===== */
 @media (max-width:768px) {
-  .nav {
-    gap: .8rem;
-    font-size: .9rem;
-  }
-
   .hero {
     padding: 4rem 1rem;
   }
@@ -895,6 +890,9 @@ footer {
   }
 
   .nav {
+    gap: .8rem;
+    font-size: .9rem;
+    align-items: stretch;
     position: fixed;
     top: 70px;
     left: 0;
@@ -902,7 +900,6 @@ footer {
     background: var(--white);
     flex-direction: column;
     padding: 1rem 2rem;
-    gap: 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
     transform: translateY(-100%);
     opacity: 0;
@@ -957,6 +954,21 @@ footer {
 
   .nav-dropdown.active>a::after {
     transform: rotate(180deg);
+  }
+
+  .nav a,
+  .nav-dropdown>a {
+    text-align: left;
+    padding-left: 0.75rem;
+  }
+
+  .nav-dropdown>a {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-dropdown>a::after {
+    margin-left: 0;
   }
 }
 
