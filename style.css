@@ -1685,10 +1685,6 @@ footer {
   opacity: 0.9;
 }
 
-.product-overview {
-  padding: 5rem 0;
-}
-
 .overview-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
