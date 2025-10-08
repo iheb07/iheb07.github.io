@@ -128,4 +128,23 @@ function toggleAccordion(element) {
     });
 })();
 
+// Enhanced tab functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.spec-tab');
+    const contents = document.querySelectorAll('.spec-content');
 
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            // Remove active class from all tabs and contents
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
+            // Add active class to clicked tab
+            this.classList.add('active');
+
+            // Show corresponding content
+            const tabId = this.getAttribute('data-tab');
+            document.getElementById(`${tabId}-specs`).classList.add('active');
+        });
+    });
+});
